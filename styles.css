@@ -1,0 +1,49 @@
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+}
+
+input, textarea, select {
+  background: white !important;
+  color: black !important;
+  border: 1px solid #ccc !important;
+}
+
+.btn-green {
+  background: #118d48;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-green:hover {
+  background: #0f703a;
+}
+
+.navbar {
+  background: #118d48;
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}

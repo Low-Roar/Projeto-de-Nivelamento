@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+function fazerLogin(){
+  let nome = document.getElementById("nome").value;
+  let email = document.getElementById("email").value;
+  let telefone = document.getElementById("telefone").value;
+
+  if(!nome || !email || !telefone){
+    alert("Preencha todos os campos");
+    return;
+  }
+
+  localStorage.setItem("usuarioNome", nome);
+  localStorage.setItem("usuarioEmail", email);
+  localStorage.setItem("usuarioTelefone", telefone);
+
+  window.location.href = "agendar.html";
+}
+</script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="home.html">Início</a>
+  <a href="login.html">Agendar Coleta</a>
+  <a href="guia.html">Guia</a>
+  <a href="denuncia.html">Denúncia</a>
+</header>
+
+<main style="max-width: 400px; margin: 60px auto;">
+<div class="card">
+
+<h1>Login</h1>
+
+<label>Nome</label>
+<input id="nome" type="text">
+
+<label style="margin-top: 10px;">Email</label>
+<input id="email" type="email">
+
+<label style="margin-top: 10px;">Telefone</label>
+<input id="telefone" type="text">
+
+<button class="btn-green" style="margin-top: 20px;" onclick="fazerLogin()">
+Entrar
+</button>
+
+</div>
+</main>
+
+</body>
+</html>

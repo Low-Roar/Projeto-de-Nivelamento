@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Agendar Coleta</title>
+<link rel="stylesheet" href="styles.css">
+
+<script>
+
+if(!localStorage.getItem("usuarioNome")){
+  window.location.href = "login.html";
+}
+</script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="home.html">Início</a>
+  <a href="agendar.html">Agendar Coleta</a>
+  <a href="guia.html">Guia</a>
+  <a href="denuncia.html">Denúncia</a>
+</header>
+
+<main style="max-width: 600px; margin: 40px auto;">
+<div class="card">
+
+<h1>Agendar Coleta</h1>
+<p>Usuário logado: <strong id="usuario"></strong></p>
+
+<script>
+document.getElementById("usuario").innerText =
+localStorage.getItem("usuarioNome");
+</script>
+
+<label>Endereço</label>
+<input type="text" placeholder="Rua, número, bairro">
+
+<label style="margin-top: 10px;">Tipo de objeto</label>
+<select>
+  <option>Armário</option>
+  <option>Sofá</option>
+  <option>Geladeira</option>
+  <option>Colchão</option>
+  <option>Entulho</option>
+  <option>Outro</option>
+</select>
+
+<label style="margin-top: 10px;">Descrição</label>
+<textarea placeholder="Descreva o estado, tamanho etc"></textarea>
+
+<label style="margin-top: 10px;">Data desejada</label>
+<input type="date">
+
+<button class="btn-green" style="margin-top: 20px;">
+Enviar solicitação
+</button>
+
+</div>
+</main>
+
+</body>
+</html>
